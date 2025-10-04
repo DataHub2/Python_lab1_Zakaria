@@ -18,4 +18,11 @@ with open(file_name) as f:
 
 print(dic_seq)
 
+#Cleaning data, im only looking for the letters (A, T, C, G)
 clean_seq = {}
+only_letters = {"A", "T", "C", "G"}
+
+for id, seq_lines in dic_seq.items():
+   dna_strang = seq_lines[0]
+
+
