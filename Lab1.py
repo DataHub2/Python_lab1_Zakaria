@@ -26,4 +26,12 @@ for seq_name, dna_string in dic_seq.items():
    for letter in dna_string:
       if letter in count_dic:
          count_dic[letter] += 1
+         letter_count[seq_name] = count_dic
+
+ 
+
+
+
+print("letter count")
+print(letter_count) 
          
