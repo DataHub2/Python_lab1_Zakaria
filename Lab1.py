@@ -12,17 +12,18 @@ with open(file_name) as f:
     line = line.strip().upper()
     if line.startswith(">"):
         id = line[1:]
-        dic_seq[id] = []
+        dic_seq[id] = ""
     else:
-        dic_seq[id].append(line)
+        dic_seq[id] += line
 
 print(dic_seq)
 
-#Cleaning data, im only looking for the letters (A, T, C, G)
-clean_seq = {}
-only_letters = {"A", "T", "C", "G"}
+#This code will be counting the letters
+letter_count = {}
 
-for id, seq_lines in dic_seq.items():
-   dna_strang = seq_lines[0]
-
-
+for seq_name, dna_string in dic_seq.items():
+   count_dic = {"A": 0, "T": 0, "C": 0, "G": 0}
+   for letter in dna_string:
+      if letter in count_dic:
+         count_dic[letter] += 1
+         
