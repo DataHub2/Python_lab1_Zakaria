@@ -1,4 +1,11 @@
 import matplotlib.pyplot as plt 
+#källor och hjälp:
+# Vägledning från DeepSeek, hjälp med hur jag skulle lägga ipp strukturen 
+# Används för att förstå koncept och problemlösningsmetoder
+#w3schools hjälpte mig med hur jag skulle öppna filen med (with)
+
+
+
 
 # Lab-1 
 # jag la in filen i variabel  
@@ -31,6 +38,20 @@ for seq_name, dna_string in dic_seq.items():
 
 print("letter count")
 print(letter_count) 
+# försöker skapar diagram för dna bokstäverna 
+for seq_name, counts in letter_count.items():   
+   letter = list(counts.keys()) 
+   amount = list(counts.values())
+   # dessa delar visar de som ska stå på både y och x axlarna, den gör det tydligt för när diagramet ska läsas
+   plt.bar(letter, amount)
+   plt.title(f"Dna letter  {seq_name}")
+   plt.xlabel("dna letter")
+   plt.ylabel("amount")
+   plt.show()
+
+
+
+
 
 
    
