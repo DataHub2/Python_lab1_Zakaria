@@ -1,13 +1,13 @@
 import matplotlib.pyplot as plt 
 #källor och hjälp:
-# Vägledning från DeepSeek, hjälp med hur jag skulle lägga ipp strukturen 
+#LLM hjälp med felsökning när jag suttit fast ett tag 
 # Används för att förstå koncept och problemlösningsmetoder
-#w3schools hjälpte mig med hur jag skulle öppna filen med (with)
+# w3schools hjälpte mig med hur jag skulle öppna filen med (with)
 
 
 
 
-# Lab-1 
+# Lab-1 task1
 # jag la in filen i variabel  
 file_name = "dna_raw.txt"
 dic_seq = {}
@@ -29,7 +29,7 @@ print(dic_seq)
 letter_count = {}
 
 for seq_name, dna_string in dic_seq.items():
-   count_dic = {"A": 0, "T": 0, "C": 0, "G": 0}
+   count_dic = {"A": 0, "T": 0, "C": 0, "G": 0, "N": 0}
    for letter in dna_string:
       if letter in count_dic:   
          count_dic[letter] += 1
